@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import * as React from 'react'
 import { fetchWords, Word } from './async2'
 
 type Handler = (words: string[]) => void
@@ -20,9 +20,9 @@ function closure() {
 const addHandler = closure()
 
 export const AsyncDemo3 = () => {
-  const [words, setWords] = useState<string[]>()
+  const [words, setWords] = React.useState<string[]>()
 
-  useEffect(() => {
+  React.useEffect(() => {
     addHandler(setWords)
   }, [])
 

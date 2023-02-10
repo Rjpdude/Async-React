@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import * as React from 'react'
 import { fetchValue } from './async1'
 
 export const fetchWords = () =>
@@ -14,9 +14,9 @@ export const fetchWords = () =>
     })
 
 export const AsyncDemo2 = () => {
-  const [words, setWords] = useState<string[]>()
+  const [words, setWords] = React.useState<string[]>()
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetchWords().then(setWords)
   }, [])
 

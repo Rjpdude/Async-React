@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import * as React from 'react'
 
 // Okay so lets say we need to call an async function when a user
 // clicks on a button. Lets see! First, lets create a little plaything
@@ -13,7 +13,7 @@ export const fetchValue = () => {
 }
 
 export const AsyncDemo1 = () => {
-  const [value, setValue] = useState('')
+  const [value, setValue] = React.useState('')
 
   const refresh = () => {
     fetchValue().then(setValue)

@@ -1,4 +1,5 @@
-import { GlobalStyle } from 'styles/global'
+import * as React from 'react'
+import { GlobalStyle } from './styles/global'
 import { AsyncDemo1 } from './async1'
 
 const App = () => {
